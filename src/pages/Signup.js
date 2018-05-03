@@ -6,7 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import {Link} from 'react-router-dom';
 
-export default class Login extends React.Component {
+export default class Signup extends React.Component {
   render(){
     return(
       <div className="row middle-xs">
@@ -25,14 +25,14 @@ export default class Login extends React.Component {
                   className="textfield"
                   />
               <div className="Login-actions">
-                  <Link to="/signup" style={{"marginRight":"1em"}}>Crear nueva cuenta</Link>
-                  <RaisedButton label="ingresar" secondary={true}></RaisedButton>
+                <Link to="/login" style={{"marginRight":"1em"}}>Ya tengo  cuenta</Link>
+                  <RaisedButton label="Crear cuenta" secondary={true}></RaisedButton>
               </div>
             </div>
           </Container>
         </div>
         <div className="col-xs-12 col-sm-6">
-          <div className="Login-Background" style={{'backgroundImage': "url("+process.env.PUBLIC_URL + '/images/login1.jpg'+")"}}></div>
+          <div className="Login-Background" style={{'backgroundImage': "url("+process.env.PUBLIC_URL + '/images/login4.jpeg'+")"}}></div>
         </div>
       </div>
     )

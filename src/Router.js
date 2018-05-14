@@ -10,16 +10,18 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import App from './App';
 
+// usurio registrado
 const userSignedIn = true;
+
 export default class Router extends React.Component{
 
 
 
   signedInRoutes(){
-    if(true){
+    if(userSignedIn){
       return(
         <Route path="/new" render={()=><h1>Orale</h1>} />
-      )
+      );
     }
   }
 
@@ -33,7 +35,7 @@ export default class Router extends React.Component{
     return(
       <ReactRouter>
         <App>
-          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/" component={this.home()}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/signup" component={Login}></Route>
           {this.signedInRoutes()}
